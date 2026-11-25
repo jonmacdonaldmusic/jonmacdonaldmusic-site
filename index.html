@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jon MacDonald — Singer-Songwriter</title>
+<meta name="description" content="Jon MacDonald is a singer-songwriter from Grande Prairie, Alberta. Country, Americana, and originals, played live on acoustic guitar and piano.">
+<meta name="theme-color" content="#1E1E1E">
+<link rel="canonical" href="https://jonmacdonaldmusic.com/">
+<link rel="icon" href="assets/jm-monogram-charcoal.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/jm-monogram-charcoal.png">
+<meta property="og:title" content="Jon MacDonald — Singer-Songwriter">
+<meta property="og:description" content="Singer-songwriter from Grande Prairie, Alberta. Country / Americana.">
+<meta property="og:image" content="https://jonmacdonaldmusic.com/assets/hero-brick-warm.jpg">
+<meta property="og:url" content="https://jonmacdonaldmusic.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jon MacDonald">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jon MacDonald — Singer-Songwriter">
+<meta name="twitter:description" content="Singer-songwriter from Grande Prairie, Alberta. Country / Americana.">
+<meta name="twitter:image" content="https://jonmacdonaldmusic.com/assets/hero-brick-warm.jpg">
+<style>
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --charcoal: #1E1E1E;
+  --bone: #F4EFE6;
+  --rust: #C1502E;
+  --steel: #5B7489;
+  --gravel: #8A8279;
+  --gold: #E3A857;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Inter, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--charcoal);
+  background: var(--bone);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--rust); }
+a:hover { color: var(--charcoal); }
+.hero a, .footer a, .live a { color: var(--bone); }
+.hero a:hover, .footer a:hover, .live a:hover { color: var(--rust); }
+
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--rust);
+  color: var(--bone);
+  padding: 0.5rem 1rem;
+  z-index: 20;
+}
+.skip:focus { left: 0; }
+
+.print-only { display: none; }
+
+/* ——— Hero ——— */
+.hero {
+  display: grid;
+  grid-template-columns: 1.12fr minmax(280px, 1fr);
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--charcoal);
+  color: var(--bone);
+}
+.hero-photo {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  background: #151515;
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 52% 16%;
+}
+.hero-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 2.4rem 2.2rem;
+  min-height: 100%;
+}
+.hero-copy {
+  margin-top: auto;
+  padding-top: 2rem;
+}
+.hero-brand { margin-top: 0; }
+.print-contact { display: none; }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1.25rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+nav a { text-decoration: none; color: var(--bone); }
+nav a:hover { color: var(--rust); }
+
+.wordmark {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+}
+.sub {
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin: 0.85rem 0 0;
+}
+.genre {
+  margin: 0.85rem 0 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--bone);
+}
+
+.bio {
+  max-width: 36rem;
+  margin: 2rem 0 1.6rem;
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+.bio p { margin: 0; }
+
+.cta {
+  display: inline-block;
+  background: var(--rust);
+  color: var(--bone) !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.9rem 1.35rem;
+  border: 0;
+}
+.cta:hover { background: #a64428; color: var(--bone) !important; }
+
+/* ——— Info ——— */
+.info {
+  background: var(--bone);
+  color: var(--charcoal);
+  padding: 3.5rem 1.5rem 4rem;
+}
+.info-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.9fr;
+  gap: 3rem 4rem;
+}
+h2 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 900;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: inline-block;
+  border-bottom: 3px solid var(--rust);
+  padding: 0 0 0.35rem;
+  margin: 0 0 1.25rem;
+  color: var(--charcoal);
+}
+.block + .block { margin-top: 2.4rem; }
+
+.dates { list-style: none; margin: 0; padding: 0; }
+.dates li {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0.35rem 1rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid color-mix(in srgb, var(--gravel) 35%, transparent);
+}
+.dates li:last-child { border-bottom: 1px solid color-mix(in srgb, var(--gravel) 35%, transparent); }
+.dates .when {
+  font-size: 0.78rem;
+  color: var(--gravel);
+  letter-spacing: 0.04em;
+  padding-top: 0.18rem;
+}
+.dates strong {
+  display: block;
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: var(--charcoal);
+}
+.dates .where {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--steel);
+  margin-top: 0.15rem;
+}
+
+.prose { margin: 0; max-width: 28rem; }
+.prose + .prose { margin-top: 0.85rem; }
+.tech {
+  margin: 1rem 0 0;
+  font-size: 0.95rem;
+  color: var(--charcoal);
+}
+.tech strong { font-weight: 600; }
+
+/* ——— Listen ——— */
+.listen-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
+}
+.slot {
+  border: 1px solid color-mix(in srgb, var(--gravel) 40%, transparent);
+  min-height: 6.2rem;
+  padding: 1rem 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: color-mix(in srgb, var(--bone) 88%, #fff);
+}
+.slot .kind {
+  font-family: Montserrat, sans-serif;
+  font-weight: 900;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+}
+.slot .soon {
+  margin: 0.3rem 0 0;
+  font-size: 0.85rem;
+  color: var(--gravel);
+}
+.slot .rule {
+  width: 2.2rem;
+  height: 3px;
+  background: var(--rust);
+  margin-bottom: 0.7rem;
+}
+
+/* ——— Footer ——— */
+.footer {
+  background: var(--charcoal);
+  color: var(--bone);
+  padding: 3rem 1.5rem 2.5rem;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.9fr;
+  gap: 2.5rem 4rem;
+  align-items: start;
+}
+.footer h2 {
+  color: var(--bone);
+}
+.footer .wordmark { max-width: 280px; margin-bottom: 0.6rem; }
+.contact-list { list-style: none; margin: 0; padding: 0; }
+.contact-list li { margin: 0.35rem 0; }
+.contact-list a { text-decoration: none; color: var(--bone); }
+.contact-list a:hover { color: var(--rust); }
+.contact-list .label {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gravel);
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+.contact-list .value { font-size: 1.05rem; }
+.fine {
+  margin: 1.1rem 0 0;
+  font-size: 0.8rem;
+  color: var(--gravel);
+  letter-spacing: 0.04em;
+}
+
+@media screen and (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .hero-photo {
+    height: 72vh;
+    height: 72svh;
+    min-height: 22rem;
+  }
+  .hero-panel {
+    padding: 1.4rem 1.35rem 2.2rem;
+  }
+  .hero-brand { margin-top: 1.4rem; }
+  .info-inner,
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+  .dates li { grid-template-columns: 1fr; gap: 0.15rem; }
+  .dates .when { padding-top: 0; }
+}
+
+@media screen and (max-width: 520px) {
+  .genre { font-size: 0.95rem; }
+  .bio { font-size: 0.98rem; }
+  nav { gap: 0.2rem 1rem; }
+}
+
+@media print {
+  .print-only { display: block; }
+  .web-only, nav, .skip { display: none !important; }
+  a { color: inherit !important; text-decoration: none !important; }
+  html, body { background: var(--charcoal); font-size: 11pt; }
+  .epk-label {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 7.5pt;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin: 0 0 0.55rem;
+  }
+
+  @page { size: letter portrait; margin: 0; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+  .hero {
+    grid-template-columns: 52% 48%;
+    width: 8.5in;
+    height: 11in;
+    min-height: 11in;
+    max-height: 11in;
+    page-break-after: always;
+    break-after: page;
+  }
+  .hero-photo { height: 11in; min-height: 11in; }
+  .hero-panel { padding: 0.65in 0.5in 0.55in 0.48in; }
+  .hero-copy { margin-top: 1.05in; padding-top: 0; }
+  .genre { font-size: 10.5pt; white-space: nowrap; }
+  .bio { font-size: 10pt; line-height: 1.5; margin: 1.15rem 0 0; max-width: none; }
+  .cta { display: none; }
+
+  .print-contact {
+    display: block;
+    margin-top: 1.35rem;
+  }
+  .print-contact h2 { color: var(--bone); margin-bottom: 0.55rem; }
+  .print-contact p { margin: 0.28rem 0; font-size: 9.5pt; color: var(--bone); }
+  .print-contact a { color: var(--bone) !important; }
+
+  .afterword {
+    display: flex;
+    flex-direction: column;
+    width: 8.5in;
+    height: 11in;
+    page-break-before: always;
+    break-before: page;
+    break-inside: avoid;
+    background: var(--bone);
+  }
+  .info {
+    padding: 0.6in 0.55in 0.45in;
+    flex: 1 1 auto;
+    min-height: 0;
+    page-break-before: auto;
+    break-before: auto;
+  }
+  .info-inner {
+    display: grid !important;
+    grid-template-columns: 1.15fr 0.95fr !important;
+    gap: 0.35in 0.5in;
+    max-width: none;
+  }
+  .footer {
+    padding: 0.42in 0.55in 0.5in;
+    flex: 0 0 auto;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .footer-inner {
+    max-width: none;
+    display: grid !important;
+    grid-template-columns: 1.15fr 0.95fr !important;
+    gap: 0.25in 0.4in;
+    align-items: start;
+  }
+  .footer .wordmark { max-width: 2.6in; }
+  .fine { margin-top: 0.45rem; }
+  h2 { margin-bottom: 0.55rem; }
+  .block + .block { margin-top: 1.05rem; }
+  .dates li {
+    display: grid !important;
+    grid-template-columns: 1.15in 1fr !important;
+    padding: 0.42rem 0;
+  }
+  .slot { min-height: 0; padding: 0.7rem 0.75rem 0.75rem; }
+  .listen-grid { gap: 0.4rem; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#bio">Skip to content</a>
+
+<header class="hero">
+  <div class="hero-photo">
+    <img src="assets/hero-brick-warm.jpg" alt="Jon MacDonald playing acoustic guitar in front of a brick wall">
+  </div>
+  <div class="hero-panel">
+    <nav class="web-only" aria-label="Page">
+      <a href="#shows">Shows</a>
+      <a href="#listen">Listen</a>
+      <a href="#booking">Booking</a>
+      <a href="Jon-MacDonald-EPK.pdf">EPK PDF</a>
+    </nav>
+    <div class="hero-copy">
+      <div class="hero-brand">
+        <p class="epk-label print-only">Electronic Press Kit</p>
+        <img class="wordmark" src="assets/wordmark-light.svg" alt="Jon MacDonald">
+        <p class="sub">Grande Prairie · Alberta</p>
+        <p class="genre">Country / Americana / Singer-songwriter</p>
+      </div>
+      <div class="bio" id="bio">
+        <p>Jon MacDonald is a singer-songwriter from Grande Prairie, Alberta. He mostly plays acoustic guitar, and some piano too. He sings country and Americana, mixing his own originals with songs from artists he loves like Chris Stapleton, Ryan Adams and Fred Eaglesmith. He’s been playing and writing songs since he was a kid, and is now bringing them to the stage.</p>
+      </div>
+      <!-- TBD: replace with Jon's confirmed booking email when ready -->
+      <a class="cta web-only" href="mailto:booking@jonmacdonaldmusic.com">Book a date</a>
+      <div class="print-contact print-only">
+        <h2>Booking</h2>
+        <!-- TBD: replace with Jon's confirmed booking email when ready -->
+        <p><a href="mailto:booking@jonmacdonaldmusic.com">booking@jonmacdonaldmusic.com</a></p>
+        <p>Instagram <a href="https://www.instagram.com/jonmacdonaldmusic">@jonmacdonaldmusic</a><br>
+        TikTok <a href="https://www.tiktok.com/@jonmacdonald.music">@jonmacdonald.music</a></p>
+        <p>jonmacdonaldmusic.com</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="afterword">
+<main class="info">
+  <div class="info-inner">
+    <div>
+      <div class="block" id="shows">
+        <h2>Upcoming</h2>
+        <ol class="dates">
+          <li>
+            <!-- TBD: add confirmed Latitude 55 date -->
+            <span class="when">Date TBD</span>
+            <div>
+              <strong>Latitude 55 Distillery and Lounge</strong>
+              <span class="where">Grande Prairie, AB</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="block">
+        <h2>Recent</h2>
+        <ol class="dates">
+          <li>
+            <time class="when" datetime="2026-11-21">Nov 21, 2026</time>
+            <div>
+              <strong>Wintersong</strong>
+              <span class="where">Grande Prairie, AB</span>
+            </div>
+          </li>
+          <li>
+            <time class="when" datetime="2026-10">October 2026</time>
+            <div>
+              <strong>Wild Horse Lounge open mic</strong>
+              <span class="where">Evergreen Park, Grande Prairie</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div>
+      <div class="block">
+        <h2>The show</h2>
+        <p class="prose">Solo acoustic. Sets from a 3-song showcase up to two 45–60 minute sets, mixing originals and covers.</p>
+        <p class="tech"><strong>Tech needs:</strong> 1 vocal mic, 1 acoustic DI, 1 monitor.</p>
+      </div>
+      <div class="block" id="listen">
+        <h2>Listen</h2>
+        <!-- TBD: add video and listening links when available. Do not attach unreleased audio. -->
+        <div class="listen-grid">
+          <div class="slot">
+            <div class="rule"></div>
+            <div class="kind">Video</div>
+            <p class="soon">Coming soon</p>
+          </div>
+          <div class="slot">
+            <div class="rule"></div>
+            <div class="kind">Video</div>
+            <p class="soon">Coming soon</p>
+          </div>
+          <div class="slot">
+            <div class="rule"></div>
+            <div class="kind">Link</div>
+            <p class="soon">Coming soon</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer" id="booking">
+  <div class="footer-inner">
+    <div>
+      <img class="wordmark" src="assets/wordmark-light.svg" alt="">
+      <p class="sub">Grande Prairie · Alberta</p>
+      <p class="fine">jonmacdonaldmusic.com</p>
+    </div>
+    <div>
+      <h2>Booking</h2>
+      <ul class="contact-list">
+        <li>
+          <span class="label">Email</span>
+          <!-- TBD: replace with Jon's confirmed booking email when ready -->
+          <a class="value" href="mailto:booking@jonmacdonaldmusic.com">booking@jonmacdonaldmusic.com</a>
+        </li>
+        <li>
+          <span class="label">Instagram</span>
+          <a class="value" href="https://www.instagram.com/jonmacdonaldmusic">@jonmacdonaldmusic</a>
+        </li>
+        <li>
+          <span class="label">TikTok</span>
+          <a class="value" href="https://www.tiktok.com/@jonmacdonald.music">@jonmacdonald.music</a>
+        </li>
+        <li class="web-only">
+          <span class="label">Press kit</span>
+          <a class="value" href="Jon-MacDonald-EPK.pdf">Download PDF</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</div>
+</body>
+</html>
